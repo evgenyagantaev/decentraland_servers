@@ -170,6 +170,9 @@ async def main():
     # Initialize the NPCAssistant instance (database path remains the same)
     db_folder = "DOCs_db"  # Replace with the actual path if needed
     assistant = NPCAssistant(db_folder)
+
+    print(OPENAI_API_KEY)
+    print(OPENAI_API_BASE)
     
     # Create SSL context with TLS server protocol
     ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
@@ -182,10 +185,10 @@ async def main():
     async with websockets.serve(
             lambda ws: websocket_handler(ws, assistant),
             "0.0.0.0",
-            1373,
+            37137,
             ssl=ssl_context
         ):
-        print("WebSocket server started on wss://0.0.0.0:1373")
+        print("WebSocket server started on wss://0.0.0.0:37137")
         await asyncio.Future()  # run forever
 
 if __name__ == "__main__":
