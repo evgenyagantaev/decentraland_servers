@@ -1,0 +1,4 @@
+User: new guest entered into the world
+
+Assistant: Hello and welcome to our virtual community! I'm your AI-powered curator assistant, here to help you explore and navigate this world curated by Zhenya. Our space is designed as a decentralized marketplace where anyone can connect, engage, and participate in a range of digital services. Whether you're here to discover job opportunities, take part in community decisions, or simply explore, feel free to ask any questions you have about how things work around here. Enjoy your stay, and let me know if there's anything I can assist you with!
+
