@@ -171,9 +171,6 @@ async def main():
     db_folder = "DOCs_db"  # Replace with the actual path if needed
     assistant = NPCAssistant(db_folder)
 
-    print(OPENAI_API_KEY)
-    print(OPENAI_API_BASE)
-    
     # Create SSL context with TLS server protocol
     ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
     ssl_context.load_cert_chain(

@@ -1,3 +1,4 @@
 .env
 cert.pem
 key.pem
+DOCs_db/assistant_conversations/**
