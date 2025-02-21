@@ -171,11 +171,12 @@ async def main():
     db_folder = "DOCs_db"  # Replace with the actual path if needed
     assistant = NPCAssistant(db_folder)
 
-    # Create SSL context with TLS server protocol
-    ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+    # Create an SSL context for TLS
+    ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
+    # Load the certificate and key
     ssl_context.load_cert_chain(
-        pathlib.Path("cert.pem"),
-        keyfile=pathlib.Path("key.pem")
+        certfile="/etc/letsencrypt/live/evgenyagantaev.duckdns.org/fullchain.pem",
+        keyfile="/etc/letsencrypt/live/evgenyagantaev.duckdns.org/privkey.pem"
     )
     
     # Start WebSocket server with SSL; update the lambda to accept one parameter
